@@ -1,15 +1,25 @@
 # TTOpenInAppActivity
 
-`TTOpenInAppActivity` is a `UIActivity` subclass that provides an "Open In ..." action to a `UIActivityViewController`. `TTOpenInAppActivity` uses an UIDocumentInteractionController to present all Apps than can handle the document specified with a file URL.
+`TTOpenInAppActivity` is a `UIActivity` subclass that provides an "Open In ..." action to a `UIActivityViewController`. `TTOpenInAppActivity` uses an UIDocumentInteractionController to present all Apps than can handle the document specified with by the activity items.
 
 <img src=http://i40.tinypic.com/xn887b.png width="320px" />
 
 ## Used In
 
+- [Stud.IP Mobile by Tobias Tiemerding](http://www.studip-mobile.de)
 - [PenUltimate by Evernote](https://itunes.apple.com/app/penultimate/id354098826?mt=8)
 - [Bugshot by Marco Arment](https://itunes.apple.com/de/app/bugshot/id669858907?mt=8)
 - [WriteDown - a Markdown text editor with syncing support by Nguyen Vinh](https://itunes.apple.com/app/id670733152)
 - [Trail Maker](https://itunes.apple.com/de/app/trail-maker/id651198801?l=en&mt=8)
+- [Syncspace by The Infinite Kind](http://infinitekind.com/syncspace)
+- [SketchTo by The Infinite Kind](http://infinitekind.com/sketchto)
+- [Calex by Martin Stemmle](http://calexapp.com)
+- [deGeo by MobileInfoCenter](http://mobileinfocenter.com/degeo/)
+- [Lyynifier by Lyyn](http://www.lyyn.com/lyynifier)
+- [KyBook by Kolyvan](http://kolyvan.com/kybook/index.html)
+- [Photo OCR](https://itunes.apple.com/app/photo-ocr/id640974771?mt=8)
+- [My Wonderful Days](http://itunes.apple.com/app/id434356065?mt=8)
+- [Name2Brain](https://itunes.apple.com/app/name2brain/id850789077?mt=8)
 - Please tell me if you use TTOpenInAppActivity in your App (just submit it as an [issue](https://github.com/honkmaster/TTOpenInAppActivity/issues))! 
 
 ## Requirements
@@ -19,11 +29,11 @@
 
 ## Installation
 
-Add the `TTOpenInAppActivity` subfolder to your project. There are no required libraries other than `UIKit` and `MobileCoreServices`.
+Add the `TTOpenInAppActivity` subfolder to your project. Required libraries: `UIKit`, `CoreGraphics`, `ImageIO` and `MobileCoreServices`.
 
 ## Usage.
 
-- We need do keep an referemce to the superview (UIActionSheet). In this way we dismiss the UIActionSheet ans instead display the UIDocumentInterActionController.
+- We keep a weak referemce to the superview (UIActionSheet). In this way we dismiss the UIActionSheet ans instead display the UIDocumentInterActionController.
 - `TTOpenInAppActivity` needs to be initalized with the current view (iPhone & iPad) and a) a CGRect or b) a UIBarButtonItem (both only for iPad) from where it can present the UIDocumentInterActionController.
 - See example project.
 
@@ -47,9 +57,15 @@ if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
 }
 
 ```
+
+## Contributer (Thank You!)
+
+- [Vincent Tourraine](https://github.com/vtourraine) 
+- [Jesse Ditson](https://github.com/jesseditson)
+
 ## License
 
-Copyright (c) 2012-2013 Tobias Tiemerding
+Copyright (c) 2012-2014 Tobias Tiemerding
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
